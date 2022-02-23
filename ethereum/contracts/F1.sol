@@ -73,11 +73,13 @@ contract FormulaBet{
 
     function predictConstructorsTable(string[] memory _constructorsP)public isOnBet{
         require(_constructorsP.length == 10);
+        require(predictions[msg.sender].constructors.length == 0);
         predictions[msg.sender].constructors = _constructorsP;
     }
 
     function predictDriversTable(string[] memory _driversP)public isOnBet{
         require(_driversP.length == 20);
+        require(predictions[msg.sender].drivers.length == 0);
         predictions[msg.sender].drivers = _driversP;
     }
     function predictChecoWins(uint8 _checoWin)public isOnBet{
