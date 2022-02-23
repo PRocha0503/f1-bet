@@ -167,9 +167,9 @@ const Predictions = () => {
 					</Link>
 				</div>
 			</div>
-			<body className="bg-slate-800 ">
+			<body className="bg-slate-800">
 				<div className=" flex mt-10 ">
-					<div className="m-auto flex">
+					<div className="m-auto flex grid grid-cols-1 sm:grid gap-4">
 						<h1 className=" text-white text-3xl font-bold  mx-4 h-10">
 							Checo Wins
 						</h1>
@@ -190,24 +190,24 @@ const Predictions = () => {
 									className="bg-blue-300 rounded-lg py-1 px-2 text-white h-10 mx-4"
 								></input>
 							</div>
-							{isAdmin ? (
-								<button
-									onClick={async () => {
-										await setChecosWins();
-									}}
-									className=" bg-orange-300 rounded-lg py-1 px-2 text-white h-10 mx-4"
-								>
-									Set Checo Wins Final Results (only admin)
-								</button>
-							) : (
-								<></>
-							)}
 						</form>
+						{isAdmin ? (
+							<button
+								onClick={async () => {
+									await setChecosWins();
+								}}
+								className="w-full bg-orange-300 rounded-lg py-1 px-2 text-white h-10 mx-4"
+							>
+								Set Checo Wins Final Results
+							</button>
+						) : (
+							<></>
+						)}
 					</div>
 				</div>
-				<div className="grid grid-cols-4 gap-4 py-20">
+				<div className="grid grid-cols-1 sm:grid-cols-4 gap-4 py-20">
 					<div></div>
-					<div>
+					<div className="mx-auto">
 						<DragDropContext onDragEnd={handleOnDragEnd}>
 							<Droppable droppableId="constructors">
 								{(provided) => (
@@ -258,13 +258,13 @@ const Predictions = () => {
 								}}
 								className=" w-full bg-orange-300 my-4 h-20 rounded-lg text-white font-bold text-lg"
 							>
-								Set Constructors Final Results (only admin)
+								Set Constructors Final Results
 							</button>
 						) : (
 							<></>
 						)}
 					</div>
-					<div>
+					<div className="mx-auto">
 						<DragDropContext onDragEnd={handleOnDragEndDrivers}>
 							<Droppable droppableId="drivers">
 								{(provided) => (
@@ -316,7 +316,7 @@ const Predictions = () => {
 								}}
 								className=" w-full bg-orange-300 my-4 h-20 rounded-lg text-white font-bold text-lg"
 							>
-								Set Drivers Final Results(only admin)
+								Set Drivers Final Results
 							</button>
 						) : (
 							<></>

@@ -104,8 +104,8 @@ const mainPage = () => {
 	};
 	return (
 		<>
-			<body className="h-screen flex">
-				<div className="w-1/3 bg-slate-800 h-full grid grid-rows-2 grid-flow-col gap-0">
+			<body className=" sm:flex">
+				<div className="w-full sm:w-1/3 bg-slate-800 h-full grid grid-rows-2 grid-flow-col gap-0">
 					<div>
 						<div className="grid justify-items-stretch">
 							<div className="justify-self-end mt-20">
@@ -133,7 +133,7 @@ const mainPage = () => {
 						</button>
 					</div>
 				</div>
-				<div className="w-full ml-4 h-full grid grid-rows-6 grid-flow-col gap-4 px-6">
+				<div className="w-full sm:ml-4 h-full grid grid-rows-6 grid-flow-col gap-4 px-6">
 					<div className="grid justify-items-stretch mt-20">
 						<div className="justify-self-start ...">
 							<h1 className="text-6xl text-slate-800 font-bold font-bold">
@@ -142,7 +142,7 @@ const mainPage = () => {
 						</div>
 					</div>
 					<div className="row-span-5 h-full ">
-						<div className="grid grid-cols-4 gap-4 h-full">
+						<div className="grid grid-cols-1 sm:grid-cols-4 gap-4 h-full">
 							<div className="m-auto ">
 								<Image
 									src="/assets/logo.png"
@@ -153,18 +153,18 @@ const mainPage = () => {
 							</div>
 							<div className=" flex  h-full">
 								<Link href="/predictions">
-									<div className=" bg-slate-800 rounded-lg p-6 m-auto h-5/6 hover:cursor-pointer">
+									<div className=" bg-slate-800 rounded-lg p-6 m-auto h-full sm:h-5/6 hover:cursor-pointer">
 										<div className="flex">
-											<h1 className="text-4xl text-white  mx-auto font-semibold ">
+											<h1 className="text-lg sm:text-4xl text-white  mx-auto font-semibold ">
 												ENTER PREDICTIONS
 											</h1>
 										</div>
-										<ul className="text-2xl text-white list-disc list-inside my-6">
+										<ul className="sm:text-2xl text-white list-disc list-inside my-2 sm:my-6">
 											<li className="my-2">Constructors</li>
 											<li className="my-2">Drivers</li>
 											<li className="my-2">Checo Wins</li>
 										</ul>
-										<p className="text-lg text-white">
+										<p className="sm:text-lg text-white ">
 											For constuctors and drivers:<br></br> 5 points if correct{" "}
 											<br></br> 3 ponits if 1 off <br></br> 1 point if 2 off{" "}
 											<br></br>4 extra points for guessing number of wins by
@@ -174,7 +174,7 @@ const mainPage = () => {
 								</Link>
 							</div>
 							<div className="  flex h-full">
-								<div className=" grid grid-rows-5 grid-flow-col gap-4 h-5/6 m-auto w-full">
+								<div className=" grid grid-rows-5 grid-flow-col gap-4 h-full sm:h-5/6 m-auto w-full">
 									<button
 										className="bg-red-800 rounded-lg text-white text-3xl font-bold"
 										onClick={getContestants}
@@ -209,7 +209,7 @@ const mainPage = () => {
 							</div>
 							<div>
 								<div className=" flex  h-full">
-									<div className=" bg-black rounded-lg p-6 m-auto h-5/6 w-full">
+									<div className=" bg-black rounded-lg p-6 m-auto  h-full sm:h-5/6 w-full">
 										<div className="flex">
 											<h1 className="text-4xl text-white  mx-auto font-semibold ">
 												INFO
