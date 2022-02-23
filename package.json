@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "mocha",
 		"dev": "next dev",
-		"svg": "svgr -d assets/icons assets"
+		"svg": "svgr -d assets/icons assets",
+		"build": "next build && next export"
 	},
 	"author": "Pablo Rocha",
 	"license": "ISC",
