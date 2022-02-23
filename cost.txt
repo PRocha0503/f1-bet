@@ -1,0 +1,5 @@
+Enter bet = 0.59
+Predict drivers = 3.44
+Predict constructors = 0.60
+Calculate Results = 2.73, 1 person
+Aprove winner = 0.55

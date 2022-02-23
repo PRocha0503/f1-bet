@@ -27,11 +27,6 @@ var output = JSON.parse(solc.compile(JSON.stringify(input)));
 fs.ensureDirSync(buildPath);
 
 for (let contractName in output.contracts[contractPath]) {
-	// console.log(
-	// 	contractName +
-	// 		": " +
-	// 		ouStput.contracts[contractPath][contractName].evm.bytecode.object
-	// );
 	fs.outputJSONSync(
 		path.resolve(buildPath, contractName + ".json"),
 		output.contracts[contractPath][contractName]
