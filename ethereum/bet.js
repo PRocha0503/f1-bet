@@ -3,7 +3,7 @@ import CompiledBet from "./build/FormulaBet.json";
 
 const bet = new web3.eth.Contract(
 	CompiledBet.abi,
-	"0x73f6c58F0F001425eed4C6647aaF79Dd64c7ca9E"
+	"0xaB160D98c611D124D81F4186b804EA38e42E6bd9"
 );
 
 export default bet;

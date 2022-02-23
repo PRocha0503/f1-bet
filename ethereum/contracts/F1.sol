@@ -6,6 +6,7 @@ contract FormulaBet{
          string[] constructors;
          string[] drivers;
          uint8 checoWins;
+         bool hasPredictedCW;
          uint constructorsPoints;
          uint driversPoints;
          uint checoPoints;
@@ -84,7 +85,9 @@ contract FormulaBet{
     }
     function predictChecoWins(uint8 _checoWin)public isOnBet{
         require(_checoWin >= 0);
+        require(!predictions[msg.sender].hasPredictedCW);
         predictions[msg.sender].checoWins = _checoWin;
+        predictions[msg.sender].hasPredictedCW = true;
     }
     function checkStingEquality(string memory s1, string memory s2) private pure returns(bool){
         if(keccak256(abi.encodePacked(s1)) == keccak256(abi.encodePacked(s2))){
