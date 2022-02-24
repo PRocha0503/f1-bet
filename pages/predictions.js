@@ -11,7 +11,7 @@ const constructors = [
 	["Red Bull", "bg-blue-900"],
 	["Ferrari", "bg-red-700"],
 	["McLaren", "bg-orange-500"],
-	["Alpine", "bg-blue-600"],
+	["Alpine", "bg-blue-200"],
 	["Alpha Tauri", "bg-gray-300"],
 	["Aston", "bg-green-800"],
 	["Williams", "bg-blue-300"],
@@ -207,7 +207,7 @@ const Predictions = () => {
 				</div>
 				<div className="grid grid-cols-1 sm:grid-cols-4 gap-4 py-20">
 					<div></div>
-					<div className="mx-auto">
+					<div className="mx-auto w-11/12">
 						<DragDropContext onDragEnd={handleOnDragEnd}>
 							<Droppable droppableId="constructors">
 								{(provided) => (
@@ -264,7 +264,7 @@ const Predictions = () => {
 							<></>
 						)}
 					</div>
-					<div className="mx-auto">
+					<div className="mx-auto w-11/12">
 						<DragDropContext onDragEnd={handleOnDragEndDrivers}>
 							<Droppable droppableId="drivers">
 								{(provided) => (
